@@ -1,0 +1,56 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .MapComponent {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #4CAF50;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  input[readonly] {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+  }
+  
+  .map-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
