@@ -1,3 +1,7 @@
+.admin-page{
+  display: flex;
+}
+
 .admin-login-page {
   height: 100vh;
   display: flex;
@@ -70,13 +74,13 @@
   color: #111827; /* Dark gray color */
 }
 
-.card {
+.form-warpper-card {
   margin-top: 32px; /* mt-8 - 32px top margin */
 }
 
 /* For small screens and up (≥640px) */
 @media (min-width: 640px) {
-  .card {
+  .form-warpper-card {
     margin-left: auto; /* sm:mx-auto - auto margin-left */
     margin-right: auto; /* sm:mx-auto - auto margin-right */
     width: 100%; /* sm:w-full - 100% width */
@@ -119,11 +123,15 @@
   color: #4a5568; /* text-gray-700 - medium dark gray text color */
 }
 
+.error-message-div{
+  height: 7px;
+}
+
 .error-message {
   color: #dc2626;
   font-size: 0.875rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  /* margin-top: 0.5rem;
+  margin-bottom: 0.5rem; */
 }
 
 .submit-button {
@@ -142,7 +150,8 @@
 }
 
 .custom-container {
-  margin-top: 24px; /* mt-6 - 24px top margin */
+  margin-top: 34px; /* mt-6 - 24px top margin */
+  margin-bottom: 17px;
 }
 
 .custom-container .relative {
@@ -182,4 +191,7 @@
 
 .admin-forgot-password{
   color: #2563eb;
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 7px;
 }

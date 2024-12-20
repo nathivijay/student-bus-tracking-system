@@ -10,7 +10,7 @@ const AdminHeader = () => {
 
   return (
     <nav className="header-nav">
-      <div className="header">
+      <div className="admin-header">
         <div className="custom-element">
           <div className="logo-div">
             <Link to="/" className="home-link">

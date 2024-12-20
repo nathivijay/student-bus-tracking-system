@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
-import { Bus, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import './Fotter.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import {
+  Bus,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import "./Fotter.css";
 
 const Footer = () => {
   return (
@@ -16,7 +25,8 @@ const Footer = () => {
               <span className="footer-bus-text">campus commute</span>
             </Link>
             <p className="footer-para">
-              Making student transportation safer and more efficient with real-time tracking technology.
+              Making student transportation safer and more efficient with
+              real-time tracking technology.
             </p>
             <div className="footer-socialmedia-logo-div">
               <a href="facebook" className="footer-socialmedia-logo">
@@ -39,22 +49,22 @@ const Footer = () => {
             <h3 className="quick-link-main-head">Quick Links</h3>
             <ul className="quick-link-ul">
               <li>
-                <ScrollLink to="home" smooth={true} className="quick-link-scroll-link">
+                <ScrollLink to="home" className="quick-link-scroll-link">
                   Home
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink to="features" smooth={true} className="quick-link-scroll-link">
+                <ScrollLink to="features" className="quick-link-scroll-link">
                   Features
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink to="about" smooth={true} className="quick-link-scroll-link">
+                <ScrollLink to="about" className="quick-link-scroll-link">
                   About Us
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink to="contact" smooth={true} className="quick-link-scroll-link">
+                <ScrollLink to="contact" className="quick-link-scroll-link">
                   Contact
                 </ScrollLink>
               </li>
@@ -83,17 +93,16 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="contact-info-head">Newsletter</h3>
-            <p className="news-letter-para">Subscribe to our newsletter for updates</p>
+            <p className="news-letter-para">
+              Subscribe to our newsletter for updates
+            </p>
             <form className="quick-link-ul">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="news-letter-input"
               />
-              <button
-                type="submit"
-                className="news-letters-btn"
-              >
+              <button type="submit" className="news-letters-btn">
                 Subscribe
               </button>
             </form>
@@ -102,7 +111,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="bottom-bar">
-          <p>&copy; {new Date().getFullYear()} BusTracker. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} campus commute. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

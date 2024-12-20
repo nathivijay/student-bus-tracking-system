@@ -40,7 +40,7 @@ const MapComponent = () => {
   return (
     <div className="MapComponent">
         <h1>Map</h1>
-      <div className="map-container">
+      <div className="tracker-map-container">
         <iframe
           id="mapFrame"
           title="Google Map"

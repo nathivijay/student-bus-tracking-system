@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const [errors, setErrors] = useState({
     userPin: "",
     password: "",
-    message: ""
+    message: "",
   });
 
   const navigate = useNavigate();
@@ -51,25 +51,28 @@ const AdminLogin = () => {
     setErrors({ ...errors, message: err });
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form submitted:", formData);
-      const {userPin, password} = formData
-      const userDetails = {admin_pin: userPin, password: password}
+      const { userPin, password } = formData;
+      const userDetails = { admin_pin: userPin, password: password };
       const options = {
         method: "POST",
         body: JSON.stringify(userDetails),
         headers: {
-          'Content-type': 'application/json'
-        }
-      }
-      const response = await fetch('http://localhost:8000/admin-login', options)
-      const data = await response.json()
-      if(response.ok === true){
-        onSuccessLogin(data.jwtToken)
-      }else{
-        onFailureLogin(data.error)
+          "Content-type": "application/json",
+        },
+      };
+      const response = await fetch(
+        "http://localhost:8000/admin-login",
+        options
+      );
+      const data = await response.json();
+      if (response.ok === true) {
+        onSuccessLogin(data.jwtToken);
+      } else {
+        onFailureLogin(data.error);
       }
     }
   };
@@ -83,78 +86,99 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="admin-login-page">
-      <div className="admin-logo">
-        <Link to="/" className="admin-home-link">
-          <Bus className="admin-bus-logo" />
-          <span className="admin-bus-logo-text">Campus Commute</span>
-        </Link>
-        <h2 className="admin-main-head">Admin Login</h2>
+    <div className="admin-page">
+      <div class="map-container">
+        <iframe
+          title="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.2588892430417!2d81.86574247462003!3d17.059984712155515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a379f6221208cd9%3A0xd719ebacd3af5c58!2sGodavari%20Global%20University!5e0!3m2!1sen!2sin!4v1732887480873!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
+      <div className="admin-login-page">
+        <div className="admin-logo">
+          <Link to="/" className="admin-home-link">
+            <Bus className="admin-bus-logo" />
+            <span className="admin-bus-logo-text">Campus Commute</span>
+          </Link>
+          <h2 className="admin-main-head">Admin Login</h2>
+        </div>
 
-      <div className="card">
-        <div className="form-card">
-          <form onSubmit={handleSubmit} className="admin-login-form">
-            <div>
-              <label htmlFor="userPin" className="admin-login-label">
-                User PIN
-              </label>
-              <input
-                id="userPin"
-                name="userPin"
-                type="text"
-                autoComplete="username"
-                className="form-input"
-                value={formData.userPin}
-                onChange={handleChange}
-              />
-              {errors.userPin && (
-                <p className="error-message">{errors.userPin}</p>
-              )}
-            </div>
+        <div className="form-warpper-card">
+          <div className="form-card">
+            <form onSubmit={handleSubmit} className="admin-login-form">
+              <div>
+                <label htmlFor="userPin" className="admin-login-label">
+                  User PIN
+                </label>
+                <input
+                  id="userPin"
+                  name="userPin"
+                  type="text"
+                  autoComplete="username"
+                  className="form-input"
+                  value={formData.userPin}
+                  onChange={handleChange}
+                />
+                <div className="error-message-div">
+                  {errors.userPin && (
+                    <p className="error-message">{errors.userPin}</p>
+                  )}
+                </div>
+              </div>
 
-            <div>
-              <label htmlFor="password" className="admin-login-label">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                className="form-input"
-                value={formData.password}
-                onChange={handleChange}
-              />
-              {errors.password && (
-                <p className="error-message">{errors.password}</p>
-              )}
-            </div>
+              <div>
+                <label htmlFor="password" className="admin-login-label">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  className="form-input"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                <div className="error-message-div">
+                  {errors.password && (
+                    <p className="error-message">{errors.password}</p>
+                  )}
+                </div>
+              </div>
 
-            <div>
-              <button type="submit" className="submit-button">
-                Sign in
-              </button>
+              <div>
+                <button type="submit" className="submit-button">
+                  Sign in
+                </button>
+              </div>
+              <div>
+                {errors.message && (
+                  <p className="error-message">{errors.message}</p>
+                )}
+              </div>
+            </form>
+
+            <div className="custom-container">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">
+                    Need help?
+                  </span>
+                </div>
+              </div>
             </div>
-            {errors.message && (
-                <p className="error-message">{errors.message}</p>
-              )}
             <Link to="/">
               <p className="admin-forgot-password">forgot password ?</p>
             </Link>
-          </form>
-
-          <div className="custom-container">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
-                  Need help? Contact support
-                </span>
-              </div>
-            </div>
+            <Link to="/report-issue">
+              <p className="admin-forgot-password">Report issue</p>
+            </Link>
           </div>
         </div>
       </div>

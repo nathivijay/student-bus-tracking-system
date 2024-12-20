@@ -8,6 +8,8 @@ import AdminBusRoute from "./components/AdminRoutes/AdminBusRoute/AdminBusRoute"
 import AdminDriverRoute from "./components/AdminRoutes/AdminDriverRoute/AdminDriverRoute";
 import DriverTracker from "./components/DriverTracker/DriverTracker";
 import MapComponent from "./components/MapComponent/MapComponent";
+import ReportIssue from "./components/ReportIssue/ReportIssue";
+import StudentDashboard from "./components/StudentDashboard/StudentDashboard";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/student-login" element={<StudentLogin />} />
+        <Route path="/report-issue" element={<ReportIssue/>}/>
+        <Route path="/student-dashboard" element={<StudentDashboard/>}/>
         <Route path="/admin/dashboard" element={<AdminDashboard />}>
           <Route
             path="student"
@@ -23,8 +27,8 @@ function App() {
           />
           <Route path="bus" element={<AdminBusRoute />} />
           <Route path="driver" element={<AdminDriverRoute />} />
-          <Route path="track" element={<DriverTracker />} />
-          <Route path="map" element={<MapComponent />} />
+          <Route path="track" element={<MapComponent />} />
+          <Route path="driver" element={<DriverTracker />} />
         </Route>
       </Routes>
     </BrowserRouter>

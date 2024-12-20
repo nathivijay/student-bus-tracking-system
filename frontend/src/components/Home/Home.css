@@ -360,3 +360,78 @@
   background-color: transparent;  /* Ensure the button background is transparent */
 }
 
+.our-partner-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+
+/* partner Section */
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  justify-content: center;
+  color: #555;
+  /* Removed background for partners section */
+}
+
+/* Flexbox to make logos appear side by side */
+
+@media (min-width: 640px) {
+  .partner {
+    padding-left: 1.5rem;
+    /* Equivalent to sm:px-6 */
+    padding-right: 1.5rem;
+    /* Equivalent to sm:px-6 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .partner {
+    padding-left: 2rem;
+    /* Equivalent to lg:px-8 */
+    padding-right: 2rem;
+    /* Equivalent to lg:px-8 */
+  }
+}
+
+.universal-partners-div{
+  display: flex;
+}
+
+.logo {
+  /* height: 700px; */
+  border-radius: 0.5rem;
+  /* Equivalent to rounded-lg */
+}
+
+@media (min-width: 640px) {
+  .logo {
+    padding-left: 1.5rem;
+    /* Equivalent to sm:px-6 */
+    padding-right: 1.5rem;
+    /* Equivalent to sm:px-6 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    padding-left: 2rem;
+    /* Equivalent to lg:px-8 */
+    padding-right: 2rem;
+    /* Equivalent to lg:px-8 */
+  }
+}
+.img-logo{
+  height:90px;
+  margin-top: 40px;
+}
+.img-logos{
+  height:110px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

@@ -89,13 +89,13 @@
   color: #111827; /* Dark gray color */
 }
 
-.card {
+.form-warpper-card {
   margin-top: 32px; /* mt-8 - 32px top margin */
 }
 
 /* For small screens and up (≥640px) */
 @media (min-width: 640px) {
-  .card {
+  .form-warpper-card {
     margin-left: auto; /* sm:mx-auto - auto margin-left */
     margin-right: auto; /* sm:mx-auto - auto margin-right */
     width: 100%; /* sm:w-full - 100% width */
@@ -138,12 +138,6 @@
   color: #4a5568; /* text-gray-700 - medium dark gray text color */
 }
 
-.error-message {
-  color: #dc2626;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 
 .submit-button {
   width: 100%;
@@ -158,43 +152,4 @@
 
 .submit-button:hover {
   background-color: #1e40af;
-}
-
-.custom-container {
-  margin-top: 24px; /* mt-6 - 24px top margin */
-}
-
-.custom-container .relative {
-  position: relative;
-}
-
-.custom-container .absolute {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-}
-
-.custom-container .relative .w-full {
-  width: 100%;
-  border-top: 1px solid #d1d5db;
-}
-
-.custom-container .relative .flex {
-  display: flex;
-  justify-content: center;
-  font-size: 0.875rem; /* text-sm - 14px */
-}
-
-.custom-container .relative .px-2 {
-  padding-left: 8px; /* px-2 - 8px left padding */
-  padding-right: 8px; /* px-2 - 8px right padding */
-}
-
-.custom-container .relative .bg-white {
-  background-color: #ffffff; /* bg-white - white background */
-}
-
-.custom-container .relative .text-gray-500 {
-  color: #6b7280; /* text-gray-500 - medium gray text color */
 }

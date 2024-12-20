@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { Bus, Menu, X } from 'lucide-react';
 import './Header.css'
+import GGU from './Assets/GGU.png'
+import IIT from './Assets/IIT.png'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +17,12 @@ const Header = () => {
     <nav className="header-nav">
       <div className="header">
         <div className="custom-element">
+
+          <div className='header-partners-images-div'>
+            <img src={GGU} alt="GGU" className='header-partners-image-left' />
+            <img src={IIT} alt="IIt" className='header-partners-image' />
+          </div>
+          
           <div className="logo-div">
             <Link to="/" className="home-link">
               <Bus className="bus-logo" />
@@ -24,16 +32,16 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <div className="desktop-header">
-            <ScrollLink to="home" smooth={true} className="nav-link">
+            <ScrollLink to="home" className="nav-link">
               Home
             </ScrollLink>
-            <ScrollLink to="features" smooth={true} className="nav-link">
+            <ScrollLink to="features" className="nav-link">
               Features
             </ScrollLink>
-            <ScrollLink to="about" smooth={true} className="nav-link">
+            <ScrollLink to="about" className="nav-link">
               About Us
             </ScrollLink>
-            <ScrollLink to="contact" smooth={true} className="nav-link">
+            <ScrollLink to="contact" className="nav-link">
               Contact
             </ScrollLink>
             
@@ -62,12 +70,12 @@ const Header = () => {
               )}
             </div>
             
-            <Link
+            {/* <Link
               to="/signup"
               className="sign-up-link"
             >
               Sign Up
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile menu button */}
@@ -87,7 +95,6 @@ const Header = () => {
             <div className="options-div">
               <ScrollLink
                 to="home"
-                smooth={true}
                 className="scroll-link"
                 onClick={() => setIsOpen(false)}
               >
@@ -95,7 +102,6 @@ const Header = () => {
               </ScrollLink>
               <ScrollLink
                 to="features"
-                smooth={true}
                 className="scroll-link"
                 onClick={() => setIsOpen(false)}
               >
@@ -103,7 +109,6 @@ const Header = () => {
               </ScrollLink>
               <ScrollLink
                 to="about"
-                smooth={true}
                 className="scroll-link"
                 onClick={() => setIsOpen(false)}
               >
@@ -111,7 +116,6 @@ const Header = () => {
               </ScrollLink>
               <ScrollLink
                 to="contact"
-                smooth={true}
                 className="scroll-link"
                 onClick={() => setIsOpen(false)}
               >
@@ -129,12 +133,12 @@ const Header = () => {
               >
                 Student Login
               </Link>
-              <Link
+              {/* <Link
                 to="/signup"
                 className="sign-up-link-s"
               >
                 Sign Up
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}

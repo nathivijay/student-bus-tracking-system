@@ -44,7 +44,7 @@ const StudentLogin = () => {
 
   const onSuccessLogin = (jwtToken) => {
     Cookies.set("jwt_token", jwtToken);
-    navigate("/", { replace: true });
+    navigate("/student-dashboard", { replace: true });
   };
 
   const onFailureLogin = (err) => {
@@ -105,7 +105,7 @@ const StudentLogin = () => {
           <h2 className="admin-main-head">student Login</h2>
         </div>
 
-        <div className="card">
+        <div className="form-warpper-card">
           <div className="form-card">
             <form onSubmit={handleSubmit} className="admin-login-form">
               <div>
